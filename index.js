@@ -28,6 +28,8 @@ app.use('/api/users', users);
 app.use('/api/auth', auth);
 app.use('/api/products', products);
 
-
-const port = process.env.PORT || 3000;
+const cors = require("cors");
+      app.use(cors());
+      
+const port = process.env.PORT || 8080;
 app.listen(port, ()=>{console.log(`Listenng port ${port}...`)});
